@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nextmenu.dao.UserDao">
+	
+	<sql id="Base_Column_List">
+		userid,passwd
+	</sql>
+
+	<select id="find-By-UserId" resultType="com.nextmenu.form.User"
+		parameterType="java.lang.String">
+		select
+		<include refid="Base_Column_List" />
+		from user
+		where userid = #{userId, jdbcType=VARCHAR}
+	</select>
+
+	<select id="check-Password" resultType="com.nextmenu.form.User"
+		parameterType="java.util.HashMap">
+		select
+		<include refid="Base_Column_List" />
+		from user
+		where userid = #{userId,jdbcType=VARCHAR} and passwd = #{passwd,jdbcType=VARCHAR}
+	</select>
+</mapper>
