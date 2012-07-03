@@ -7,9 +7,9 @@
      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
      http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
 	default-autowire="byName">
-	<!-- enable autowire (optional) -->
+	
 	<context:annotation-config />
-	<!-- 导入属性配置文件 -->
+	
 	<context:property-placeholder location="classpath*:mybatis.properties"
 		ignore-unresolvable="true" />
 
@@ -27,12 +27,11 @@
 		<property name="password" value="root"></property>
 	</bean>
 
-	
 	<!-- or you can scan for mappers and then inject them -->
 	<bean class="org.mybatis.spring.annotation.MapperScannerPostProcessor">
 		<property name="basePackage" value="com.nextmenu" />
 	</bean>
 	<bean id="userDao"
-		class="com.liaolitao.dao.impl.UserDaoImpl"></bean>
+		class="com.nextmenu.apps.dao.impl.UserDaoImpl"></bean>
 
 </beans>
