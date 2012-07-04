@@ -9,10 +9,7 @@ import org.springframework.stereotype.Service;
 import com.nextmenu.apps.base.entity.Role;
 import com.nextmenu.orm.mybatis.MyBatisDao;
 
-/**
- * 角色管理
- * @author 菠萝大象
- */
+
 @Service
 public class RoleService {
 

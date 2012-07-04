@@ -10,10 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.nextmenu.apps.base.entity.Role;
 import com.nextmenu.apps.base.service.RoleService;
 
-/**
- * 角色管理
- * @author 菠萝大象
- */
+
 @Controller
 @RequestMapping("/role")
 public class RoleController {

@@ -18,11 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.nextmenu.apps.base.entity.User;
 import com.nextmenu.apps.base.service.UserService;
 
-/**
- * 人员管理
- * 
- * @author 菠萝大象
- */
+
 @Controller
 @RequestMapping("/user")
 public class UserController {
