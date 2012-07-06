@@ -7,7 +7,6 @@ import com.nextmenu.apps.base.entity.Role;
 import com.nextmenu.apps.base.service.RoleService;
 import com.nextmenu.cp.service.MyService;
 
-
 @Service
 public class RoleServiceImpl extends MyService implements RoleService {
 

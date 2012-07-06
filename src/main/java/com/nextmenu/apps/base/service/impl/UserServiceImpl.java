@@ -2,15 +2,11 @@ package com.nextmenu.apps.base.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.nextmenu.apps.base.entity.User;
 import com.nextmenu.apps.base.service.UserService;
-import com.nextmenu.cp.dao.MyDao;
 import com.nextmenu.cp.service.MyService;
 
-import org.springframework.context.annotation.Scope; 
-@Scope("prototype")
 @Service
 public class UserServiceImpl extends MyService implements UserService{
 

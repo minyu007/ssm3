@@ -2,12 +2,10 @@ package com.nextmenu.apps.base.service;
 
 import java.io.Serializable;
 import java.util.List;
-import org.springframework.stereotype.Service;
 import com.nextmenu.apps.base.entity.User;
 
 
-
-public interface UserService {
+public interface UserService{
 	
 	public List<?> queryResult(User user);
 	
