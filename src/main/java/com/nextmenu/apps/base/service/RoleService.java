@@ -2,36 +2,16 @@ package com.nextmenu.apps.base.service;
 
 import java.io.Serializable;
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.nextmenu.apps.base.entity.Role;
-import com.nextmenu.cp.dao.MyDao;
 
+public interface RoleService {
 
-@Service
-public class RoleService {
-
-	@Autowired
-	private MyDao myDao;
 	
-	public List<Role> getRoles(){
-		return myDao.getList("roleMapper.selectByEntity");
-	}
+	public List<Role> getRoles();
 	
-	public Role getRole(Serializable id){
-		return myDao.get("roleMapper.selectByPrimaryKey",id);
-	}
+	public Role getRole(Serializable id);
 	
-	public void save(Role role){
-		if(role.getId() == null)
-			myDao.insert("roleMapper.insert", role);
-		else
-			myDao.update("roleMapper.update", role);
-	}
+	public void save(Role role);
 	
-	public void delete(Serializable id){
-		myDao.delete("roleMapper.delete", id);
-	}
+	public void delete(Serializable id);
 }

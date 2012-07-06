@@ -27,7 +27,7 @@
 	</bean>
 
 	<!-- mybatis Dao -->
-	<bean id="myBatisDao" class="com.nextmenu.orm.mybatis.MyBatisDao" />
+	<bean id="myDao" class="com.nextmenu.cp.dao.MyDao" />
 
 	<!-- Data Source -->
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">

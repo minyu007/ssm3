@@ -28,6 +28,7 @@ public class UserController {
 
 	@RequestMapping(method = { RequestMethod.GET, RequestMethod.POST })
 	public String list(Model model, User user) {
+		
 		model.addAttribute("list", userService.queryResult(user));
 		model.addAttribute("entity", user);
 		return "base/user_list";
