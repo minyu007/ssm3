@@ -3,8 +3,6 @@ package com.nextmenu.apps.base.controller;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,19 +15,17 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.nextmenu.apps.base.entity.User;
 import com.nextmenu.apps.base.service.UserService;
+import com.nextmenu.cp.Controller.MyController;
 
 
 @Controller
 @RequestMapping("/user")
-public class UserController {
-
-	@Autowired
-	private UserService userService;
+public class UserController extends MyController{
 
 	@RequestMapping(method = { RequestMethod.GET, RequestMethod.POST })
 	public String list(Model model, User user) {
-		
-		model.addAttribute("list", userService.queryResult(user));
+		UserService us = (UserService)service;
+		model.addAttribute("list", us.queryResult(user));
 		model.addAttribute("entity", user);
 		return "base/user_list";
 	}

@@ -5,7 +5,6 @@ import java.util.List;
 import com.nextmenu.apps.base.entity.Role;
 
 public interface RoleService {
-
 	
 	public List<Role> getRoles();
 	

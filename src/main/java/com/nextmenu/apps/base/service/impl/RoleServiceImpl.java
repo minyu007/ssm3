@@ -2,21 +2,15 @@ package com.nextmenu.apps.base.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.nextmenu.apps.base.entity.Role;
 import com.nextmenu.apps.base.service.RoleService;
-import com.nextmenu.cp.dao.MyDao;
+import com.nextmenu.cp.service.MyService;
 
 
 @Service
-public class RoleServiceImpl implements RoleService {
+public class RoleServiceImpl extends MyService implements RoleService {
 
-	@Autowired
-	private MyDao myDao;
-	
 	public List<Role> getRoles(){
 		return myDao.getList("roleMapper.selectByEntity");
 	}
