@@ -7,31 +7,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.nextmenu.apps.base.entity.Role;
-import com.nextmenu.orm.mybatis.MyBatisDao;
+import com.nextmenu.cp.dao.MyDao;
 
 
 @Service
 public class RoleService {
 
 	@Autowired
-	private MyBatisDao myBatisDao;
+	private MyDao myDao;
 	
 	public List<Role> getRoles(){
-		return myBatisDao.getList("roleMapper.selectByEntity");
+		return myDao.getList("roleMapper.selectByEntity");
 	}
 	
 	public Role getRole(Serializable id){
-		return myBatisDao.get("roleMapper.selectByPrimaryKey",id);
+		return myDao.get("roleMapper.selectByPrimaryKey",id);
 	}
 	
 	public void save(Role role){
 		if(role.getId() == null)
-			myBatisDao.save("roleMapper.insert", role);
+			myDao.insert("roleMapper.insert", role);
 		else
-			myBatisDao.save("roleMapper.update", role);
+			myDao.update("roleMapper.update", role);
 	}
 	
 	public void delete(Serializable id){
-		myBatisDao.delete("roleMapper.delete", id);
+		myDao.delete("roleMapper.delete", id);
 	}
 }

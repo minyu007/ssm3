@@ -7,23 +7,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.nextmenu.apps.base.entity.User;
-import com.nextmenu.orm.mybatis.MyBatisDao;
+import com.nextmenu.cp.dao.MyDao;
 
 
 @Service
 public class UserService {
 
 	@Autowired
-	private MyBatisDao myBatisDao;
+	private MyDao myDao;
 	
 	/**
 	 * 根据条件查询
 	 */
 	public List queryResult(User user){
-		return myBatisDao.getList("userMapper.selectByQuery",user);
+		return myDao.getList("userMapper.selectByQuery",user);
 	}
 	
 	public User getUser(Serializable id){
-		return myBatisDao.get("userMapper.selectByPrimaryKey",id);
+		return myDao.get("userMapper.selectByPrimaryKey",id);
 	}
 }
