@@ -20,7 +20,6 @@ public class RoleController{
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String list(Model model){
-		//RoleService rs = (RoleService)service;
 		model.addAttribute("list", rs.getRoles());
 		return "base/role_list";
 	}
@@ -33,35 +32,28 @@ public class RoleController{
 	
 	@RequestMapping(value="/edit/{id}", method = RequestMethod.GET)
 	public String edit(Model model, @PathVariable Integer id){
-		//RoleService rs = (RoleService)service;
 		model.addAttribute("entity", rs.getRole(id));
 		return "base/role_edit";
 	}
 	
 	@RequestMapping(value="/save", method = RequestMethod.POST)
 	public String save(Model model, Role role){
-		//RoleService rs = (RoleService)service;
 		rs.save(role);
 		return "redirect:/role";
 	}
 	
 	@RequestMapping(value="/view/{id}", method = RequestMethod.GET)
 	public String view(Model model, @PathVariable Integer id){
-		//RoleService rs = (RoleService)service;
 		model.addAttribute("entity", rs.getRole(id));
 		return "base/role_view";
 	}
 	
 	@RequestMapping(value="/delete/{id}", method = RequestMethod.GET)
 	public String delete(Model model, @PathVariable Integer id){
-		//RoleService rs = (RoleService)service;
 		rs.delete(id);
 		return "redirect:/role";
 	}
 	
-	/**
-	 * 转到UserController
-	 */
 	@RequestMapping(value="/redirect_user", method = RequestMethod.GET)
 	public String redirectUser(){
 		return "redirect:/user";
