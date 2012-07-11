@@ -1,4 +1,4 @@
-package com.nextmenu.apps.ctrl;
+package com.nextmenu.apps.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

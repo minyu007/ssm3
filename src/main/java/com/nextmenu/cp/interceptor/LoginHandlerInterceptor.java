@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginHandlerInterceptor extends HandlerInterceptorAdapter{
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-		return false;
+		System.out.println("preHandle");
+		return true;
 	}
 }

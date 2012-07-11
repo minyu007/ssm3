@@ -1,4 +1,4 @@
-package com.nextmenu.apps.ctrl;
+package com.nextmenu.apps.controller;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

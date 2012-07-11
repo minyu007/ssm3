@@ -16,10 +16,12 @@
 	<!-- authority manager -->
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/admin/*.html*"/>
+			<mvc:mapping path="/admin/*"/>
 			<bean class="com.nextmenu.cp.interceptor.LoginHandlerInterceptor"/>
 		</mvc:interceptor>
 	</mvc:interceptors>
+	
+	<bean id="exceptionResolver" class="com.nextmenu.cp.resolver.MyExceptionResolver"></bean>
 	
 	<mvc:view-controller path="/" view-name="forward:/hello" />
 
