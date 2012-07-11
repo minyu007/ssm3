@@ -1,4 +1,4 @@
-package com.nextmenu.apps.base.controller;
+package com.nextmenu.apps.ctrl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.nextmenu.apps.base.entity.Role;
-import com.nextmenu.apps.base.service.RoleService;
+import com.nextmenu.apps.entity.Role;
+import com.nextmenu.apps.service.RoleService;
 
 
 @Controller

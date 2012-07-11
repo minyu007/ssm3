@@ -1,10 +1,10 @@
-package com.nextmenu.apps.base.service.impl;
+package com.nextmenu.apps.service.impl;
 
 import java.io.Serializable;
 import java.util.List;
 import org.springframework.stereotype.Service;
-import com.nextmenu.apps.base.entity.Role;
-import com.nextmenu.apps.base.service.RoleService;
+import com.nextmenu.apps.entity.Role;
+import com.nextmenu.apps.service.RoleService;
 import com.nextmenu.cp.service.MyService;
 
 @Service

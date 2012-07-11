@@ -1,8 +1,9 @@
-package com.nextmenu.apps.base.service;
+package com.nextmenu.apps.service;
 
 import java.io.Serializable;
 import java.util.List;
-import com.nextmenu.apps.base.entity.Role;
+
+import com.nextmenu.apps.entity.Role;
 
 public interface RoleService{
 	

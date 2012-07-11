@@ -1,4 +1,4 @@
-package com.nextmenu.apps.base.entity;
+package com.nextmenu.apps.entity;
 
 
 public class User {

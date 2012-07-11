@@ -10,8 +10,8 @@
 	</settings>
 
 	<typeAliases>
-		<typeAlias alias="user" type="com.nextmenu.apps.base.entity.User" />
-		<typeAlias alias="role" type="com.nextmenu.apps.base.entity.Role" />
+		<typeAlias alias="user" type="com.nextmenu.apps.entity.User" />
+		<typeAlias alias="role" type="com.nextmenu.apps.entity.Role" />
 	</typeAliases>
 
 	<mappers>

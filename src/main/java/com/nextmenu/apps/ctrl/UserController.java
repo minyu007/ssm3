@@ -1,4 +1,4 @@
-package com.nextmenu.apps.base.controller;
+package com.nextmenu.apps.ctrl;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import com.nextmenu.apps.base.entity.User;
-import com.nextmenu.apps.base.service.UserService;
+import com.nextmenu.apps.entity.User;
+import com.nextmenu.apps.service.UserService;
 
 
 @Controller
