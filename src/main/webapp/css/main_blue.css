@@ -1,0 +1,64 @@
+html {
+	color: #333;
+	background: #FFF;
+	direction: ltr
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td
+	{
+	margin: 0;
+	padding: 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+fieldset,img {
+	border: 0
+}
+
+li {
+	list-style: none
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 100%;
+	font-weight: normal
+}
+
+html {
+	_background: url(about:blank) no-repeat fixed;
+}
+
+body {
+	font-size: 9pt;
+	font-family: Tahoma, Verdana, STHeiTi, simsun, sans-serif
+}
+
+strong {
+	font-weight: bold
+}
+
+em {
+	font-style: italic
+}
+
+a:link,a:visited {
+	color: #005EAC;
+	text-decoration: none
+}
+
+a:hover {
+	color: #005EAC;
+	text-decoration: underline
+}
+
+p {
+	line-height: 1.4em
+}
+
+label select,label input,label textarea {
+	vertical-align: middle
+}
