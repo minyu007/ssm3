@@ -253,7 +253,7 @@ div.topbar-bg {
 	margin: 0;
 }
 
-.front-login .forgot， .front-login .separator{
+.front-login .forgot, .front-login .separator{
 	display: inline; 
 	margin: 0;
 	font-size: 11px;
@@ -264,7 +264,17 @@ div.topbar-bg {
 	text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
 	text-decoration:none;
 }
-
+.front-login .separator{
+	display: inline; 
+	margin: 0;
+	font-size: 11px;
+	line-height: 13px;
+	color: #999; 
+	-webkit-text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
+	-moz-text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
+	text-decoration:none;
+}
 .front-login .forgot:hover {
 	text-decoration:underline;
 }
