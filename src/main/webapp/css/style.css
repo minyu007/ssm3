@@ -248,8 +248,8 @@ li.accordion-menu {
 
 #block-top .thumbnails .badge {
     position: absolute;
-    left: -5px;
-    top: -7px;
+    left: 0px;
+    top: 0px;
 }
 
 #block-top .thumbnails .label {
@@ -259,9 +259,9 @@ li.accordion-menu {
 }
 
 #block-top .thumbnails > li  {
-    margin-left: 4px;
-    margin-right: 8px;
-    margin-top: 8px;
+    margin-left: 2px;
+    margin-right: 4px;
+    margin-top: 4px;
 }
 
 /*Grid Page*/
