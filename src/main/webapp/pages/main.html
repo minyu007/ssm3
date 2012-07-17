@@ -53,24 +53,25 @@ body {
 	</div>
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div id="menu-left" class="span3">
+			<div id="menu-left" class="span2">
 				<div class="sidebar-nav">
 					<ul class="nav nav-list">
 						<li><a href="#" class="current" data-original-title=""><i class="icon-th-large icon-white"></i><span style="display: inline;"> 主页</span></a></li>
 						<li><a href="#" data-original-title=""><i class="icon-th"></i><span style="display: inline;">餐桌管理</span></a></li>
 						<li><a href="#" data-original-title=""><i class="icon-list-alt"></i><span style="display: inline;">菜谱管理</span></a></li>
 						<li><a href="#" data-original-title=""><i class="icon-indent-left"></i><span style="display: inline;">进货管理</span></a></li>
-						<li><a href="#" data-original-title=""><i class="icon-gift"></i><span style="display: inline;">杂项收入 & 支出</span></a></li>
+						<li><a href="#" data-original-title=""><i class="icon-gift"></i><span style="display: inline;">杂项收入/支出</span></a></li>
 						<li><a href="#" data-original-title=""><i class="icon-comment"></i><span style="display: inline;">营业信息查询</span></a></li>
 						<li class="accordion-menu">
 							<a href="#collapseOne" data-toggle="collapse" class="accordion-toggle" data-original-title="">
-								<i class="icon-wrench"></i><span style="display: inline;">系统设置</span>
+								<i class="icon-wrench"></i><span style="display: inline;">设置</span>
 							</a>
 							<div class="accordion-body collapse dropdown" id="collapseOne" style="display: block;">
 								<div class="accordion-inner">
 									<ul class="nav nav-list">
-										<li><a href="#" data-original-title="">操作员管理</a></li>
-										<li><a href="#" data-original-title="">发票名头管理</a></li>
+										<li><a href="#" data-original-title="">人员设置</a></li>
+										<li><a href="#" data-original-title="">系统设置</a></li>
+										<li><a href="#" data-original-title="">票据设置</a></li>
 									</ul>
 								</div>
 							</div>
@@ -84,7 +85,7 @@ body {
 				</div>
 			</div>
 			
-			<div id="content" class="span9  section-body">
+			<div id="content" class="span10 section-body">
 				<div id="section-body" class="tabbable">
 					<ul class="nav nav-tabs">
 						<li class="active"><a href="#tab1" data-toggle="tab"
@@ -165,20 +166,21 @@ body {
 														</div>
 													</div>
 													<hr class="soften">
-														<div class="alert alert-success" >
-															<div class="">
-																<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
-																<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
-																<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
-																<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
-																<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
-																<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
-																<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
-																<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
-															</div>
+													<div class="alert alert-success" >
+														<div id="mergeMsg">
+															<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
+															<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
+															<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
+															<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
+															<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
+															<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
+															<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
+															<span class="label label-success" style="font-size:13px"><a href="#" style="cursor:pointer;color:#ffffff" title="点击删除">1号桌 x</a></span>
 														</div>
-													<ul class="thumbnails">
-														<li class="span2">
+													</div>
+													<div id="tableList">
+													<ul class="thumbnails" >
+														<li class="span2" id="table_type_001">
 															<div class="thumbnail clearfix">
 																<div>
 																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
@@ -188,19 +190,19 @@ body {
 																	<p>8位 8菜 188元</p>
 																</div>
 																<div class="btn-group">
-																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
-																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
-																	<button class="btn btn-success" style="padding:4px 5px 4px 7px"><i class="icon-plus icon-white"></i></button>
+																	<a class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></a>
+																	<a class="btn" href="#myModal" data-toggle="modal" style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></a>
+																	<a class="btn btn-success" style="padding:4px 5px 4px 7px"><i class="icon-plus icon-white"></i></a>
 																</div>
 															</div>
 														</li>
-														<li class="span2">
+														<li class="span2" id="table_type_002">
 															<div class="thumbnail clearfix">
 																<div>
 																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
 																</div>
 																<div class="caption">
-																	<h5>1号桌</h5>
+																	<h5>2号桌</h5>
 																	<p>8位 8菜 188元</p>
 																</div>
 																<div class="btn-group">
@@ -210,9 +212,171 @@ body {
 																</div>
 															</div>
 														</li>
-														
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
+													</ul>
+													<ul class="thumbnails" >
+														<li class="span2" id="table_type_001">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>1号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<a class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></a>
+																	<a class="btn" href="#myModal" data-toggle="modal" style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></a>
+																	<a class="btn btn-success" style="padding:4px 5px 4px 7px"><i class="icon-plus icon-white"></i></a>
+																</div>
+															</div>
+														</li>
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
+														<li class="span2" id="table_type_002">
+															<div class="thumbnail clearfix">
+																<div>
+																	<img style="cursor: pointer" src="http://localhost:8080/ssm3/images/table4.jpg" alt="">
+																</div>
+																<div class="caption">
+																	<h5>2号桌</h5>
+																	<p>8位 8菜 188元</p>
+																</div>
+																<div class="btn-group">
+																	<button class="btn" style="padding:4px 6px 4px 7px"><i class="icon-shopping-cart"></i></button>
+																	<button class="btn " style="padding:4px 6px 4px 7px"><i class=" icon-pencil "></i></button>
+																	<button class="btn btn-danger" style="padding:4px 5px 4px 7px"><i class="icon-minus icon-white"></i></button>
+																</div>
+															</div>
+														</li>
 													</ul>
 													<hr class="soften">
+													</div>
 												</div>
 											</div>
 										</div>
@@ -281,8 +445,8 @@ body {
 			$('.togglemenuleft').click(function() {
 				$('#menu-left').toggleClass('span1');
 				$('#menu-left').toggleClass('icons-only');
-				$('#menu-left').toggleClass('span3');
-				$('#content').toggleClass('span9');
+				$('#menu-left').toggleClass('span2');
+				$('#content').toggleClass('span10');
 				$('#content').toggleClass('span11');
 
 				$(this).find('i').toggleClass('icon-circle-arrow-right');
@@ -304,6 +468,8 @@ body {
 				return false;
 			});
 		});
+		var datas = [{tableId:"table_01_00001", name:"1号桌", status: "1", msg:"8位 8菜 188元"}, {tableId:"table_01_00002", name:"2号桌", status: "1", msg:"8位 8菜 188元"}];
+		var pu = new PayUtils("#tableList","#mergeMsg", datas);
 	</script>
 </body>
 </html>
