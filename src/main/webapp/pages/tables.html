@@ -9,7 +9,7 @@
 <script type="text/javascript" src="http://localhost:8080/ssm3/js/core.js"></script>
 <script type="text/javascript" src="http://localhost:8080/ssm3/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="http://localhost:8080/ssm3/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://localhost:8080/ssm3/js/main.js"></script>
+<script type="text/javascript" src="http://localhost:8080/ssm3/js/tables.js"></script>
 
 <style type="text/css">
 body {
@@ -56,8 +56,8 @@ body {
 			<div id="menu-left" class="span2">
 				<div class="sidebar-nav">
 					<ul class="nav nav-list">
-						<li><a href="#" class="current" data-original-title=""><i class="icon-th-large icon-white"></i><span style="display: inline;"> 主页</span></a></li>
-						<li><a href="#" data-original-title=""><i class="icon-th"></i><span style="display: inline;">餐桌管理</span></a></li>
+						<li><a href="#" data-original-title=""><i class="icon-th-large"></i><span style="display: inline;"> 主页</span></a></li>
+						<li><a href="#" class="current" data-original-title=""><i class="icon-th icon-white"></i><span style="display: inline;">餐桌管理</span></a></li>
 						<li><a href="#" data-original-title=""><i class="icon-list-alt"></i><span style="display: inline;">菜谱管理</span></a></li>
 						<li><a href="#" data-original-title=""><i class="icon-indent-left"></i><span style="display: inline;">进货管理</span></a></li>
 						<li><a href="#" data-original-title=""><i class="icon-gift"></i><span style="display: inline;">杂项收入/支出</span></a></li>
@@ -87,41 +87,8 @@ body {
 			
 			<div id="content" class="span10 section-body">
 				<div id="section-body" class="tabbable">
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="#tab1" data-toggle="tab"
-							data-original-title="">快捷入口</a></li>
-					</ul>
+					
 					<div class="tab-content">
-						<!--快速入口 -->
-						<div class="tab-pane active" id="tab1">
-							<div class="row-fluid">
-								<div class="span12">
-									<div id="block-top" class="">
-										<ul class="thumbnails">
-											<li class="">
-												<a class="btn" href="#" data-original-title="新消息">
-													<img src="http://localhost:8080/ssm3/images/icons/iconset-contact45x45.png" alt="">
-													<span class="badge badge-important">6</span>
-												</a>
-											</li>
-											<li class="">
-												<a class="btn" href="#" data-original-title="first tooltip">
-													<img src="http://localhost:8080/ssm3/images/icons/iconset-promo45x45.png" alt="">
-													<span class="badge badge-warning">6</span>
-												</a>
-											</li>
-											<li class="">
-												<a class="btn" href="#" data-original-title="first tooltip">
-													<img src="http://localhost:8080/ssm3/images/icons/iconset-info45x45.png" alt="">
-													<span class="badge badge-success">2</span>
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-						<!--快速入口 end-->
 						<!-- 餐桌列表 -->
 						<div class="tab-pane active" id="tab2" style="display: block">
 							<div class="row-fluid">
@@ -149,26 +116,23 @@ body {
 																	<i class="icon-th"></i>全部
 																</button>
 																<button class="btn btn-primary">
-																	<i class="icon-time icon-white"></i>正在用餐
+																	<i class="icon-star icon-white"></i>散桌
 																</button>
 																<button class="btn btn-warning">
-																	<i class="icon-check icon-white"></i>预定中
-																</button>
-																<button class="btn btn-success">
-																	<i class=" icon-leaf icon-white"></i>未使用
+																	<i class="icon-star icon-white"></i><i class="icon-star icon-white"></i>包间
 																</button>
 															</div>
 															<div class="span3">
 																<button class="btn" id="mergeBtn">
-																	<i class="icon-cog"></i>合并付款
+																	<i class="icon-plus"></i>批量增加
+																</button>
+																<button class="btn" id="mergeBtn">
+																	<i class="icon-minus"></i>批量删除
 																</button>
 															</div>
 														</div>
 													</div>
 													<hr class="soften">
-													<div class="alert alert-success"  id="mergeMsg" style="height:18px">
-														<span>合并信息:</span>
-													</div>
 													<div id="tableList" >
 													
 													</div>
