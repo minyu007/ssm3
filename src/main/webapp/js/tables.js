@@ -1,7 +1,7 @@
 /**
  * handling main page JS processing
  */
-var PayUtils = Class.extend({
+var TableUtils = Class.extend({
 
 	init : function(rootId, mergeId, jDatas) {
 		this.rootId = $(rootId);
@@ -16,9 +16,9 @@ var PayUtils = Class.extend({
 	
 	_bindEvent : function() {
 		var _this = this;
-		$('#mergeBtn').bind('click', function(){
-			if(_this.selected.length < 2){
-				alert('请至少选择2桌，再进行合并付款!');
+		$('#delBtn').bind('click', function(){
+			if(_this.selected.length < 1){
+				alert('请至少选择1桌进行删除操作！');
 			}else{
 				console.log(_this.selected);
 			}
@@ -75,7 +75,7 @@ var PayUtils = Class.extend({
 		var div3 = $('<div>');div3.addClass("btn-group");
 		
 		var a1 =$('<a>');a1.addClass("btn");a1.css({"padding" : "4px 6px 4px 7px"});
-		var i1 = $('<i>');i1.addClass("icon-shopping-cart");
+		var i1 = $('<i>');i1.addClass("icon-trash");
 		a1.append(i1);
 		
 		var a2 =$('<a>');a2.addClass("btn");a2.css({"padding" : "4px 6px 4px 7px"});a2.attr("data-toggle", "modal");a2.attr("href" ,"#myModal");
@@ -85,11 +85,11 @@ var PayUtils = Class.extend({
 		var a3 = $('<a>');a3.css({"padding" : "4px 5px 4px 7px"});a3.addClass("btn");
 		var i3 = $('<i>');i3.addClass("icon-white");
 		if(_this.selected.indexOf(data.tableId) != -1){
-			console.log(_this.selected , data.tableId);
+			//console.log(_this.selected , data.tableId);
 			a3.addClass("btn-danger");
 			i3.addClass("icon-remove");
 		}else{
-			console.log(_this.selected , data.tableId);
+			//console.log(_this.selected , data.tableId);
 			a3.addClass("btn-success");
 			i3.addClass("icon-ok");
 		}
@@ -141,8 +141,8 @@ var PayUtils = Class.extend({
 				var i = t.find("i");
 				t.removeClass("btn-danger");
 				t.addClass("btn-success");
-				i.removeClass("icon-minus");
-				i.addClass("icon-plus");
+				i.removeClass("icon-remove");
+				i.addClass("icon-ok");
 			}
 			var idx = _this.selected.indexOf(data.tableId);
 			if(idx == -1) return;
@@ -175,7 +175,6 @@ var PayUtils = Class.extend({
 			if(_this.selected[i] != null)
 				arr.push(_this.selected[i]);
 		}
-		console.log(arr);
 		_this.selected = arr;
 	}
 });

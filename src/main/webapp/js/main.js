@@ -141,8 +141,8 @@ var PayUtils = Class.extend({
 				var i = t.find("i");
 				t.removeClass("btn-danger");
 				t.addClass("btn-success");
-				i.removeClass("icon-minus");
-				i.addClass("icon-plus");
+				i.removeClass("icon-remove");
+				i.addClass("icon-ok");
 			}
 			var idx = _this.selected.indexOf(data.tableId);
 			if(idx == -1) return;
