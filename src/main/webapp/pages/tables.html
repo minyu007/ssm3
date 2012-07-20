@@ -87,66 +87,63 @@ body {
 			
 			<div id="content" class="span10 section-body">
 				<div id="section-body" class="tabbable">
-					
-					<div class="tab-content">
-						<!-- 餐桌列表 -->
-						<div class="tab-pane active" id="tab2" style="display: block">
-							<div class="row-fluid">
-								<!--Tabs2-->
-								<div class="">
-									<div id="accordion1" class="accordion">
-										<div class="accordion-group">
-											<div class="accordion-heading">
-												<a class="accordion-toggle" data-toggle="collapse" href="#notification" data-original-title=""> 
-													<i class="icon-list-alt icon-white"></i>
-													<span class="divider-vertical"></span> 餐桌管理列表
-												</a>
-											</div>
-											<div id="notification" class="accordion-body collapse in">
-												<div class="accordion-inner paddind">
-													<div class="row-fluid">
-														<div class="span12">
-															<div class="input-append span3" style="border-right: 1px solid #DDD;">
-																<input type="text" class="input-small" size="16" data-provide="typeahead" data-items="4"
-																	data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
-																<button class="btn" type="button">查找</button>
-															</div>
-															<div class="span5">
-																<button class="btn">
-																	<i class="icon-th"></i>全部
-																</button>
-																<button class="btn btn-primary">
-																	<i class="icon-star icon-white"></i>散桌
-																</button>
-																<button class="btn btn-warning">
-																	<i class="icon-star icon-white"></i><i class="icon-star icon-white"></i>包间
-																</button>
-															</div>
-															<div class="span4">
-																<button class="btn" id="addBtn">
-																	<i class="icon-plus"></i>批量增加
-																</button>
-																<button class="btn" id="delBtn">
-																	<i class="icon-minus"></i>批量删除
-																</button>
-															</div>
-														</div>
+					<div id="accordion1" class="accordion">
+						<div class="tabbable "> 
+							<ul class="nav nav-tabs">
+								<li><a data-toggle="tab" href="#t1" data-original-title="">楼层设置</a></li>
+								<li class="active"><a data-toggle="tab" href="#t2" data-original-title="">餐桌设置</a></li>
+							</ul>
+							<div class="tab-content">
+								<div id="t1" class="tab-pane">
+									<ul>
+										<li><a href="" data-original-title="">Proin elit arcu, rutrum commodo</a></li>
+										<li><a href="" data-original-title="">Aenean tempor ullamcorper leo</a></li>
+										<li><a href="" data-original-title="">Vehicula tempus, commodo a, risus</a></li>
+										<li><a href="" data-original-title="">Donec sollicitudin mi sit amet mauris</a></li>
+										<li><a href="" data-original-title="">Curabitur nec arcu</a></li>
+									</ul>
+								</div>
+								<div id="t2" class="tab-pane active">
+										<div class="accordion-inner paddind" style="border-top: none">
+											<div class="row-fluid">
+												<div class="span12">
+													<div class="input-append span3" style="border-right: 1px solid #DDD;">
+														<input type="text" class="input-small" size="16" data-provide="typeahead" data-items="4"
+															data-source="[&quot;Alabama&quot;,&quot;Alaska&quot;,&quot;Arizona&quot;,&quot;Arkansas&quot;,&quot;California&quot;,&quot;Colorado&quot;,&quot;Connecticut&quot;,&quot;Delaware&quot;,&quot;Florida&quot;,&quot;Georgia&quot;,&quot;Hawaii&quot;,&quot;Idaho&quot;,&quot;Illinois&quot;,&quot;Indiana&quot;,&quot;Iowa&quot;,&quot;Kansas&quot;,&quot;Kentucky&quot;,&quot;Louisiana&quot;,&quot;Maine&quot;,&quot;Maryland&quot;,&quot;Massachusetts&quot;,&quot;Michigan&quot;,&quot;Minnesota&quot;,&quot;Mississippi&quot;,&quot;Missouri&quot;,&quot;Montana&quot;,&quot;Nebraska&quot;,&quot;Nevada&quot;,&quot;New Hampshire&quot;,&quot;New Jersey&quot;,&quot;New Mexico&quot;,&quot;New York&quot;,&quot;North Dakota&quot;,&quot;North Carolina&quot;,&quot;Ohio&quot;,&quot;Oklahoma&quot;,&quot;Oregon&quot;,&quot;Pennsylvania&quot;,&quot;Rhode Island&quot;,&quot;South Carolina&quot;,&quot;South Dakota&quot;,&quot;Tennessee&quot;,&quot;Texas&quot;,&quot;Utah&quot;,&quot;Vermont&quot;,&quot;Virginia&quot;,&quot;Washington&quot;,&quot;West Virginia&quot;,&quot;Wisconsin&quot;,&quot;Wyoming&quot;]">
+														<button class="btn" type="button">查找</button>
 													</div>
-													<hr class="soften">
-													<div class="alert alert-success"  id="mergeMsg" style="height:18px">
-														<span>点选信息:</span>
+													<div class="span5">
+														<button class="btn">
+															<i class="icon-th"></i>全部
+														</button>
+														<button class="btn btn-primary">
+															<i class="icon-star icon-white"></i>散桌
+														</button>
+														<button class="btn btn-warning">
+															<i class="icon-star icon-white"></i><i class="icon-star icon-white"></i>包间
+														</button>
 													</div>
-													<div id="tableList" >
-													
+													<div class="span4">
+														<button class="btn" id="addBtn">
+															<i class="icon-plus"></i>批量增加
+														</button>
+														<button class="btn" id="delBtn">
+															<i class="icon-minus"></i>批量删除
+														</button>
 													</div>
 												</div>
 											</div>
+											<hr class="soften">
+											<div class="alert alert-success"  id="mergeMsg" style="height:18px">
+												<span>点选信息:</span>
+											</div>
+											<div id="tableList" >
+											
+											</div>
 										</div>
-									</div>
 								</div>
 							</div>
 						</div>
-						<!-- 餐桌列表 end -->
 					</div>
 				</div>
 			</div>
