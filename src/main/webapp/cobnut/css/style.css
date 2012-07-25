@@ -1,6 +1,7 @@
 /* General Stuffs */
 body {
 	background: url("../img/gplay.png") repeat-x;
+	font-size: 12px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -20,7 +21,7 @@ h2 {
 }
 
 a, p, li {
-	font-size: 16px;
+	font-size: 14px;
 }
 
 
@@ -98,11 +99,11 @@ div.carousel-caption p {
 }
 
 div.carousel-caption h2 {
-	font-size: 40px;
+	font-size: 36px;
 }
 
 div.carousel-caption p {
-	font-size: 20px;
+	font-size: 18px;
 }
 
 /* featuredBox */
@@ -111,7 +112,7 @@ section.featured .span6 {
 }
 
 section.featured .span6 p {
-	font-size: 18px;
+	font-size: 16px;
 }
 
 section.featured .span6 i {
@@ -152,7 +153,7 @@ section.gewgleBox iframe {
 /* socialStuff */
 .twtr-tweet-text p,
 .twtr-tweet-text a {
-	font-size: 14px;
+	font-size: 12px;
 }
 
 /* footar */
