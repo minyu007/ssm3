@@ -1,7 +1,7 @@
 /* General Stuffs */
 body {
-	background: url("../img/gplay.png") repeat-x;
-	font-size: 12px;
+	background: url("../img/bg.jpg") repeat;
+	font: 12px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -23,7 +23,74 @@ h2 {
 a, p, li {
 	font-size: 14px;
 }
+.container{
+	width:900px;
+}
 
+.span12 {
+  width: 900px;
+}
+
+.span11 {
+  width: 820px;
+}
+
+.span10 {
+  width: 740px;
+}
+
+.span9 {
+  width:660px;
+}
+
+.span8 {
+  width: 580px;
+}
+
+.span7 {
+  width: 500px;
+}
+
+.span6 {
+  width: 420px;
+}
+
+.span5 {
+  width: 340px;
+}
+
+.span4 {
+  width: 260px;
+}
+
+.span3 {
+  width: 210px;
+}
+
+.span2 {
+  width: 100px;
+}
+
+.span1 {
+  width: 20px;
+}
+.row{
+	margin:0;
+}
+[class*="span"] {
+float: left;
+margin-left: 0px;
+}
+#wrapper {
+width: 920px;
+padding: 0 10px;
+margin: 0 auto;
+background: white;
+border: 1px solid #DDD;
+-moz-box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+box-shadow: 0 0 5px rgba(0, 0, 0, .25);
+}
 
 .align-right {
 	text-align: right;	
@@ -43,7 +110,7 @@ header.header {
 }
 
 header.header div.control-group {
-	margin: 2px 0 0 20px;
+	margin: 2px 0 0 0px;
 }
 
 img#logo {
@@ -162,10 +229,12 @@ footer.footer div.top {
 	margin-top: 80px;
 	padding: 20px 0;
 	background-color: #eee;
+	border: 1px solid #DDD;
 }
 
 footer.footer div.bottom {
 	padding: 15px 0 5px 0;
 	background-color: #ccc;
 	text-align: right;
+	border: 1px solid #DDD;
 }
